@@ -1,16 +1,53 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Email Writer Assistant  
+A Generative AI-powered email automation tool built using Spring Boot and a Chrome Extension, demonstrating practical application of LLMs in everyday workflows.
 
-Currently, two official plugins are available:
+# Overview
+This project showcases my ability to blend software engineering and AI integration, where a browser extension connects to a backend powered by Google Gemini (LLM) to generate intelligent, context-aware Gmail replies in real time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+# Features
+1. One-click AI reply in Gmail
+2. Integrated with Google Gemini API
+3. Spring Boot backend for AI requests
+4. Custom tone (professional, friendly, etc.)
+5. Real-time email content parsing  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Tech Stack
+**Frontend:** JavaScript, HTML, CSS (Chrome Extension)  
+**Backend:** Spring Boot, WebClient (Reactive)  
+**AI:** Gemini API  
+**Tools:** Maven, GitHub  
 
-## Expanding the ESLint configuration
+# API Example
+**POST** `/api/email/generate`
+JSON:
+{
+  "emailContent": "Hi, can you share the report update?",
+  "tone": "professional"
+}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Response:** "Sure! Here's a quick update on the report progress..."
+
+## Project Structure
+
+Email-Writer-Assistant/
+├── backend/
+│   ├── EmailGeneratorController.java
+│   ├── EmailGeneratorService.java
+│   └── EmailRequest.java
+└── extension/
+    ├── content.js
+    ├── manifest.json
+    └── content.css
+
+A simple yet powerful full-stack AI integration — built with Java, Spring Boot & Chrome Extension magic.
+
+# My Learnings: 
+1. Gained practical experience integrating LLMs (Gemini API) into real-world applications.
+2. Built a full-stack AI product combining frontend (Chrome Extension) and backend (Spring Boot).
+3. Learned to design prompt-based workflows for generating dynamic, context-aware responses.
+4. Understood API integration, request–response optimization, and data parsing for AI systems.
+5. Strengthened skills in modular software design, debugging, and rapid prototyping in ambiguous problem spaces.
+6. Explored the fundamentals of agent-style architecture and LLM orchestration concepts (similar to LangChain workflows).
+
